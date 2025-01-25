@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>down.svg</file>
+        <file>add.svg</file>
+        <file>edit.svg</file>
+        <file>square.svg</file>
+        <file>tick.svg</file>
+        <file>trash.svg</file>
+        <file>radio.svg</file>
+    </qresource>
+</RCC>

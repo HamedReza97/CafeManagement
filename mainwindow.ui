@@ -1,0 +1,2264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LayoutDirection::RightToLeft</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background: solid qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(10, 10, 10, 255), stop:1 rgba(20, 20, 25, 255));
+border: none;
+border-radius: 15px;
+font-family: &quot;Peyda&quot;;
+font-size : 14px;
+}
+QPushButton {
+background-color: rgba(255,255,255,10);
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 12px;
+padding: 10px 30px 10px 30px;
+}
+QPushButton:hover {
+background-color: rgba(255,255,255,20);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,10);
+}
+QPushButton:disabled {
+background-color: #222222;
+color: #666666;
+}
+QPushButton:focus {
+outline: none;
+border: 1px solid #0066FF;
+}
+QScrollArea{
+border: 1px solid transparent;
+border-radius: 20px;
+}
+
+QListView {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+padding: 5px;
+}
+QListView::item {
+border: none;
+padding: 5px;
+margin: 5px;
+color: #ffffff;
+}
+QListView::item:selected {
+background-color: #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+color: #ffffff;
+}
+QListView::item:selected:focus {
+border: 1px solid #0066FF;
+}
+QListView::item:hover {
+background-color: rgba(0,102,255,20);
+border: 1px solid transparent;
+border-radius: 5px;
+color: #0066FF;
+}
+QListView::item:disabled {
+color: #666666;
+background-color: #222222;
+}
+QLineEdit {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+color: #ffffff;
+}
+QLineEdit:focus {
+border: 1px solid #0066FF;
+}
+QLineEdit::placeholder {
+color: #666666;
+}
+QLineEdit:disabled {
+background-color: #222222;
+color: #666666;
+border: 1px solid transparent;
+}
+QProgressBar {
+border: 1px solid transparent;
+height: 12px;
+border-radius: 6px;
+background-color: rgba(255,255,255,10);
+text-align: center;
+}
+QProgressBar::chunk {
+background-color: #00DC72;
+border: 1px solid transparent;
+border-radius: 6px;
+}
+QProgressBar::indicator {
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QProgressBar:disabled {
+border: 1px solid transparent;
+background-color: #222222;
+}
+QProgressBar:focus {
+border: 1px solid transparent;
+}
+QCheckBox {
+background-color: transparent;
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QCheckBox::indicator {
+width: 18px;
+height: 18px;
+margin-left: 5px;
+}
+QRadioButton {
+color: #ffffff;
+border: none;
+}
+QRadioButton::indicator {
+width: 15px;
+height: 15px;
+margin-left: 5px;
+}
+QTabWidget::pane {
+border: none;
+border-radius: 20px;
+background-color: rgba(255,255,255,10);
+}
+QTabWidget &gt; QWidget{
+background: transparent;
+}
+QTabBar::tab {
+color: white;
+border: 1px solid transparent;
+border-bottom-color: rgba(255,255,255,10);
+border-top-left-radius: 15px;
+min-width: 100px;
+border-top-right-radius: 15px;
+padding: 6px;
+margin-right: 2px;
+}
+QTabBar::tab:selected {
+background-color: rgba(255,255,255,10);
+border-bottom: 2px solid #00DC72;
+color: white;
+}
+QTabBar::tab:!selected {
+background-color: rgba(255,255,255,20);
+color: #dddddd;
+}
+QTabBar::tab:hover {
+background-color: rgba(255,255,255,20);
+}
+QTabBar::tab:pressed {
+background-color: rgba(255,255,255,10);
+}
+QTabBar::tab:disabled {
+background-color: rgba(255,255,255,30);
+color: #666666;
+}
+QComboBox {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+color: #ffffff;
+}
+QComboBox:hover {
+background-color: rgba(255,255,255,20);
+}
+QComboBox:disabled {
+background-color: rgba(255,255,255,30);
+color: #666666;
+}
+QComboBox:pressed {
+background-color: rgba(255,255,255,10);
+}
+QComboBox QAbstractItemView {
+background: solid transparent;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QComboBox::item {
+padding:5px 0px 5px 0px;
+max-height: 18px;
+}
+QComboBox::item:selected {
+background: solid #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QGroupBox {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+padding: 10px;
+margin: 20px;
+}
+QGroupBox::title {
+margin-top: -20px;
+subcontrol-position: top;
+padding: 3px 15px 5px 15px;
+color: #ffffff;
+background-color: #222222;
+border: 1px solid transparent;
+border-radius: 10px;
+}
+
+QTableWidget {
+background-color: rgba(255,255,255,10);
+gridline-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 15px;
+}
+
+QTableWidget QHeaderView{
+background-color:  transparent;
+}
+
+QHeaderView::section::horizontal {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+
+QHeaderView::section::vertical {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+
+QTableCornerButton::section {
+background-color: transparent;
+}
+
+QTableWidget::item {
+background-color: rgba(255,255,255,10);
+padding: 7px;
+border: 1px solid transparent;
+}
+
+QTableWidget::item:alternate {
+background-color: rgba(255,255,255,30);
+}
+
+QTableWidget::item:selected {
+border-bottom: 2px solid #00DC72;
+color: white;
+}
+
+QTableWidget::item:hover {
+background-color: rgba(255,255,255,20);
+color: white;
+}
+
+QScrollBar:vertical {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:vertical {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+background-color: transparent;
+}
+
+QScrollBar:horizontal {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:horizontal {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+background-color: transparent;
+}
+
+QLabel{
+background-color: transparent;
+}
+
+QPlainTextEdit {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+color: #ffffff;
+}
+QPlainTextEdit:focus {
+border: 1px solid #0066FF;
+}
+QPlainTextEdit::placeholder {
+color: #666666;
+}
+QPlainTextEdit:disabled {
+background-color: #222222;
+color: #666666;
+border: none;
+}
+QRadioButton{
+background-color: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="font">
+    <font>
+     <family>Peyda</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_10">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="font">
+       <font>
+        <family>Peyda</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTabWidget" name="tabWidget_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="tabPosition">
+           <enum>QTabWidget::TabPosition::South</enum>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab_7">
+           <attribute name="title">
+            <string>مدیریت</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTabWidget" name="tabWidget">
+              <property name="font">
+               <font>
+                <family>Peyda</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QTabBar::tab{
+margin: 1px;
+min-height: 100px;
+min-width: 24px;
+border-top-left-radius: 15px;
+border-top-right-radius: 0px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 0px;
+}
+
+QTabBar::tab:selected {
+background-color: rgba(255,255,255,10);
+border-right: 2px solid #00DC72;
+border-bottom: none;
+color: white;
+}
+QTabBar::tab:!selected {
+background-color: rgba(255,255,255,20);
+color: #dddddd;
+}</string>
+              </property>
+              <property name="tabPosition">
+               <enum>QTabWidget::TabPosition::East</enum>
+              </property>
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="storage">
+               <attribute name="title">
+                <string>مدیریت انبار</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="2,3,4">
+                  <item>
+                   <layout class="QVBoxLayout" name="vlStorage">
+                    <item alignment="Qt::AlignmentFlag::AlignBottom">
+                     <widget class="QLabel" name="label_7">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>مدیریت انبار</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignmentFlag::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="Line" name="line">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="orientation">
+                       <enum>Qt::Orientation::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,7,0">
+                      <property name="spacing">
+                       <number>10</number>
+                      </property>
+                      <property name="sizeConstraint">
+                       <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_2">
+                        <property name="font">
+                         <font>
+                          <family>Peyda</family>
+                          <pointsize>-1</pointsize>
+                         </font>
+                        </property>
+                        <property name="text">
+                         <string>بخش</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QComboBox" name="cbStorageCat">
+                        <property name="font">
+                         <font>
+                          <family>Peyda</family>
+                          <pointsize>-1</pointsize>
+                         </font>
+                        </property>
+                        <property name="layoutDirection">
+                         <enum>Qt::LayoutDirection::RightToLeft</enum>
+                        </property>
+                        <property name="editable">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="btnCatEdit">
+                        <property name="styleSheet">
+                         <string notr="true"/>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="rbProduct">
+                      <property name="enabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>محصول</string>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                      <property name="checked">
+                       <bool>false</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_3">
+                        <item>
+                         <widget class="QLabel" name="label">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>عنوان محصول</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtProductTitle">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_4">
+                        <item>
+                         <widget class="QLabel" name="label_3">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>قیمت</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtPrice">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="inputMethodHints">
+                           <set>Qt::InputMethodHint::ImhNone</set>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_5">
+                        <item>
+                         <widget class="QLabel" name="label_4">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>تعداد</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtCount">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_6">
+                        <item>
+                         <widget class="QLabel" name="label_5">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>توضیحات</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtProductDes">
+                          <property name="enabled">
+                           <bool>false</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QRadioButton" name="rbCat">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>دسته‌بندی</string>
+                      </property>
+                      <property name="checked">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <layout class="QVBoxLayout" name="verticalLayout_2">
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_8">
+                        <item>
+                         <widget class="QLabel" name="label_6">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>عنوان</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtCatTitle">
+                          <property name="enabled">
+                           <bool>true</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                      <item>
+                       <layout class="QHBoxLayout" name="horizontalLayout_11">
+                        <item>
+                         <widget class="QLabel" name="label_9">
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>توضیحات</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QLineEdit" name="edtCatDes">
+                          <property name="enabled">
+                           <bool>true</bool>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Peyda</family>
+                            <pointsize>-1</pointsize>
+                           </font>
+                          </property>
+                          <property name="layoutDirection">
+                           <enum>Qt::LayoutDirection::RightToLeft</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
+                          </property>
+                          <property name="clearButtonEnabled">
+                           <bool>false</bool>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btnSaveStorage">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>ثبت و ذخیره</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="btnDelCat">
+                      <property name="text">
+                       <string>حذف بخش انتخاب شده</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tblStorageCat">
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="editTriggers">
+                     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                    </property>
+                    <property name="selectionMode">
+                     <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+                    </property>
+                    <property name="selectionBehavior">
+                     <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tblStorageProduct">
+                    <property name="enabled">
+                     <bool>true</bool>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="editTriggers">
+                     <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                    </property>
+                    <property name="selectionMode">
+                     <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+                    </property>
+                    <property name="selectionBehavior">
+                     <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_4">
+               <attribute name="title">
+                <string>مشتریان</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_15" stretch="1,3">
+                <item>
+                 <layout class="QVBoxLayout" name="vlCustomer">
+                  <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignBottom">
+                   <widget class="QLabel" name="label_12">
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>مدیریت مشتریان</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignmentFlag::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_2">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_12">
+                    <item>
+                     <widget class="QLabel" name="label_8">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>نام مشتری</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtCustomerName">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_13">
+                    <item>
+                     <widget class="QLabel" name="label_10">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>موجودی</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtCustomerBalance">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QCheckBox" name="chbDeptor">
+                      <property name="text">
+                       <string>بدهکار</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_23">
+                    <item>
+                     <widget class="QLabel" name="label_20">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>درصد تخفیف</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtCustomrDiscount">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <item>
+                     <widget class="QLabel" name="label_11">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>شماره تماس</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtCustomerPhone">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="btnSaveCustomer">
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>ذخیره و ثبت</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTableWidget" name="tblCustomers">
+                  <property name="font">
+                   <font>
+                    <family>Peyda</family>
+                    <pointsize>-1</pointsize>
+                   </font>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab">
+               <attribute name="title">
+                <string>کارکنان</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="1,3">
+                <item>
+                 <layout class="QVBoxLayout" name="vlEmployees">
+                  <item alignment="Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignBottom">
+                   <widget class="QLabel" name="label_21">
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>مدیریت کارکنان</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignmentFlag::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="Line" name="line_5">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_24">
+                    <item>
+                     <widget class="QLabel" name="label_22">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>نام</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtEmployeeName">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_25">
+                    <item>
+                     <widget class="QLabel" name="label_23">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>حقوق</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="edtEmployeeSalary">
+                      <property name="font">
+                       <font>
+                        <family>Peyda</family>
+                        <pointsize>-1</pointsize>
+                       </font>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="btnSaveEmployee">
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>ذخیره و ثبت</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTableWidget" name="tblEmployees">
+                  <property name="font">
+                   <font>
+                    <family>Peyda</family>
+                    <pointsize>-1</pointsize>
+                   </font>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_2">
+               <attribute name="title">
+                <string>حسابداری</string>
+               </attribute>
+               <layout class="QHBoxLayout" name="horizontalLayout_33">
+                <item>
+                 <widget class="QGroupBox" name="groupBox">
+                  <property name="title">
+                   <string>هزینه‌کرد</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_7">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_26">
+                     <item>
+                      <widget class="QLabel" name="label_25">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>مواد اولیه</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtInventoryCost"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_27">
+                     <item>
+                      <widget class="QLabel" name="label_26">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>کارکنان</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtEmployeesCost"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_29">
+                     <item>
+                      <widget class="QLabel" name="label_27">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>هزینه انرژی</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtEnergyCost"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_30">
+                     <item>
+                      <widget class="QLabel" name="label_28">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>اجاره</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtRentCost"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_2">
+                  <property name="title">
+                   <string>درآمد</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_31">
+                     <item>
+                      <widget class="QLabel" name="label_29">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>فروش</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtTotalSale"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_32">
+                     <item>
+                      <widget class="QLabel" name="label_30">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="text">
+                        <string>سود</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="edtProfit"/>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="verticalSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Vertical</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>20</width>
+                       <height>40</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Orientation::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_3">
+               <attribute name="title">
+                <string>تنظیمات</string>
+               </attribute>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_8">
+           <attribute name="title">
+            <string>ثبت سفارش</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <property name="topMargin">
+             <number>20</number>
+            </property>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <item>
+               <widget class="QScrollArea" name="orderFilterArea">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>60</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Peyda</family>
+                  <pointsize>-1</pointsize>
+                 </font>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>58</width>
+                   <height>696</height>
+                  </rect>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <layout class="QVBoxLayout" name="vlOrderFilter">
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout">
+                  <item>
+                   <widget class="QLabel" name="label_18">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>50</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>جست و جو</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLineEdit" name="edtSearchOrderFilter">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>300</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QScrollArea" name="orderCardHolder">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>400</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Peyda</family>
+                    <pointsize>-1</pointsize>
+                   </font>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="scrollAreaWidgetContents">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>398</width>
+                     <height>642</height>
+                    </rect>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QFrame" name="frame">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Peyda</family>
+                  <pointsize>-1</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QFrame{
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+}
+
+QPushButton {
+background-color: rgba(255,255,255,10);
+color: #ffffff;
+border: 1px solid transparent;
+border-radius: 12px;
+padding: 10px 20px 10px 20px;
+}
+QPushButton:hover {
+background-color: rgba(255,255,255,20);
+}
+QPushButton:pressed {
+background-color: rgba(255,255,255,10);
+}
+QPushButton:disabled {
+background-color: #222222;
+color: #666666;
+}
+QPushButton:focus {
+outline: none;
+border: 1px solid #0066FF;
+}
+QListView {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 15px;
+padding: 5px;
+}
+QListView::item {
+border: none;
+padding: 5px;
+margin: 5px;
+color: #ffffff;
+}
+QListView::item:selected {
+background-color: #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+color: #ffffff;
+}
+QListView::item:selected:focus {
+border: 1px solid #0066FF;
+}
+QListView::item:hover {
+background-color: rgba(0,102,255,20);
+border: 1px solid transparent;
+border-radius: 5px;
+color: #0066FF;
+}
+QListView::item:disabled {
+color: #666666;
+background-color: #222222;
+}
+
+QComboBox {
+background-color: rgba(255,255,255,10);
+border: 1px solid transparent;
+border-radius: 10px;
+padding: 8px;
+color: #ffffff;
+}
+QComboBox:hover {
+background-color: rgba(255,255,255,20);
+}
+QComboBox:disabled {
+background-color: rgba(255,255,255,30);
+color: #666666;
+}
+QComboBox:pressed {
+background-color: rgba(255,255,255,10);
+}
+QComboBox QAbstractItemView {
+background: solid transparent;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+QComboBox::item {
+padding:5px 0px 5px 0px;
+max-height: 18px;
+}
+QComboBox::item:selected {
+background: solid #0066FF;
+border: 1px solid transparent;
+border-radius: 5px;
+}
+
+QTableWidget {
+background-color: rgba(255,255,255,10);
+gridline-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 15px;
+}
+
+QTableWidget QHeaderView{
+background-color:  transparent;
+}
+
+QHeaderView::section::horizontal {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+
+QHeaderView::section::vertical {
+background-color:  transparent;
+color: #ffffff;
+padding: 4px;
+}
+
+QTableCornerButton::section {
+background-color: transparent;
+}
+
+QTableWidget::item {
+background-color: rgba(255,255,255,10);
+padding: 7px;
+border: 1px solid transparent;
+}
+
+QTableWidget::item:alternate {
+background-color: rgba(255,255,255,30);
+}
+
+QTableWidget::item:selected {
+border-bottom: 2px solid #00DC72;
+color: white;
+}
+
+QTableWidget::item:hover {
+background-color: rgba(255,255,255,20);
+color: white;
+}
+
+QScrollBar:vertical {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:vertical {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+background-color: transparent;
+}
+
+QScrollBar:horizontal {
+background-color: transparent;
+width: 10px;
+}
+
+QScrollBar::handle:horizontal {
+background-color: rgba(255,255,255,30);
+border: 1px solid transparent;
+border-radius: 5px;
+min-height: 20px;
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+background-color: transparent;
+}
+
+QLabel{
+background-color: transparent;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Shape::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Shadow::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlOrderList">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_18">
+                   <item>
+                    <widget class="QLabel" name="label_16">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>سفارش جدید</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer">
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="orientation">
+                      <enum>Qt::Orientation::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btnClearOrderList">
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton{
+padding: 2px 14px 4px 14px;
+border-radius: 5px;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>حذف همه</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QTableWidget" name="tblOrderList">
+                   <property name="font">
+                    <font>
+                     <family>Peyda</family>
+                     <pointsize>-1</pointsize>
+                    </font>
+                   </property>
+                   <property name="editTriggers">
+                    <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                   </property>
+                   <property name="selectionBehavior">
+                    <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_17">
+                   <item>
+                    <widget class="QLabel" name="label_14">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>مجموع</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="lblOrderTotal">
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+font-size: 18px;
+font-style: bold;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_22">
+                   <item>
+                    <widget class="QLabel" name="label_19">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>درصد تخفیف</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="edtOrderDiscount">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_19">
+                   <item>
+                    <widget class="QLabel" name="label_17">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>مشتری</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="cbOrderCustomer">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="editable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_21">
+                   <item>
+                    <widget class="QLabel" name="label_15">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>قابل پرداخت</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="lblCheckout">
+                     <property name="font">
+                      <font>
+                       <family>Peyda</family>
+                       <pointsize>-1</pointsize>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QLabel{
+color: #00DC72;
+font-size: 18px;
+font-style: bold;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="btnSubmitOrder">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Peyda</family>
+                     <pointsize>-1</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>ثبت سفارش</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_3">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_16">
+                  <item>
+                   <widget class="QLabel" name="label_13">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Peyda</family>
+                      <pointsize>-1</pointsize>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>سفارشات اخیر</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignmentFlag::AlignCenter</set>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QTableWidget" name="tblRecentOrder">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Peyda</family>
+                    <pointsize>-1</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLineEdit{
+background: solid #111111;
+padding: 5px;
+min-height: 18px;
+margin: 0px;
+}</string>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1064</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>cbStorageCat</tabstop>
+  <tabstop>edtCustomerPhone</tabstop>
+  <tabstop>edtProductTitle</tabstop>
+  <tabstop>edtPrice</tabstop>
+  <tabstop>edtCount</tabstop>
+  <tabstop>edtProductDes</tabstop>
+  <tabstop>edtCatTitle</tabstop>
+  <tabstop>edtCatDes</tabstop>
+  <tabstop>btnDelCat</tabstop>
+  <tabstop>tblStorageCat</tabstop>
+  <tabstop>tblStorageProduct</tabstop>
+  <tabstop>edtCustomerName</tabstop>
+  <tabstop>edtCustomerBalance</tabstop>
+  <tabstop>chbDeptor</tabstop>
+  <tabstop>tblCustomers</tabstop>
+  <tabstop>btnSaveCustomer</tabstop>
+  <tabstop>rbProduct</tabstop>
+  <tabstop>rbCat</tabstop>
+  <tabstop>btnCatEdit</tabstop>
+  <tabstop>btnSaveStorage</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>edtProductTitle</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>856</x>
+     <y>296</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>911</x>
+     <y>642</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtPrice</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>873</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>869</x>
+     <y>653</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCount</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>863</x>
+     <y>396</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>862</x>
+     <y>655</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtProductDes</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>827</x>
+     <y>452</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>847</x>
+     <y>646</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCatTitle</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>826</x>
+     <y>542</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>826</x>
+     <y>652</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCatDes</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveStorage</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>935</x>
+     <y>589</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>942</x>
+     <y>648</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCustomerName</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveCustomer</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>862</x>
+     <y>281</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>828</x>
+     <y>717</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCustomerBalance</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveCustomer</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>963</x>
+     <y>410</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>811</x>
+     <y>695</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCustomerPhone</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveCustomer</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>892</x>
+     <y>621</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>892</x>
+     <y>696</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edtCustomrDiscount</sender>
+   <signal>returnPressed()</signal>
+   <receiver>btnSaveCustomer</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>878</x>
+     <y>500</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>936</x>
+     <y>715</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
